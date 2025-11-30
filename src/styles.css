@@ -897,3 +897,78 @@ button {
     padding: 1rem 1rem 1.1rem;
   }
 }
+
+.dealer-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.dealer-table th,
+.dealer-table td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dealer-table td.table-actions {
+  white-space: nowrap !important;
+  text-align: right;
+}
+
+@media (max-width: 600px) {
+  .table-wrapper {
+    overflow-x: auto;
+  }
+
+  .dealer-table {
+    min-width: 700px;
+  }
+
+  .dealer-table th,
+  .dealer-table td {
+    padding: 0.6rem 0.75rem;
+  }
+}
+
+/* card view
+
+@media (max-width: 600px) {
+  .table-wrapper {
+    overflow-x: visible;
+  }
+
+  .dealer-table {
+    min-width: 0;
+  }
+
+  .dealer-table thead {
+    display: none;
+  }
+
+  .dealer-table,
+  .dealer-table tbody,
+  .dealer-table tr,
+  .dealer-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .dealer-table tr {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(30, 64, 175, 0.5);
+    padding-bottom: 0.75rem;
+  }
+
+  .dealer-table td {
+    text-align: left;
+    padding: 0.3rem 0.75rem;
+  }
+
+  .table-actions {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    margin-top: 0.4rem;
+  }
+}
